@@ -12,3 +12,6 @@ spec:
   volumes:
   - name: redis-storage
     emptyDir: {}
+
+
+dsfasdfsdfsd
