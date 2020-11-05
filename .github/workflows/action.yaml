@@ -1,14 +1,9 @@
-name: CI
-
-on: [push]
-
+on: push
+name: Validate
 jobs:
-  build:
-
+  kubeval:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - uses: dipshit/kubeval@1.0
-      with:
-        params: 'my-manifest/*'
+    - uses: actions/checkout@master
+    - name: test
+      uses: instrumenta/kubeval-action@master
